@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.19.1](https://github.com/trustoverip/dtgwg-trust-tasks-tf/compare/trust-tasks-v0.19.0...trust-tasks-v0.19.1) — 2026-09-09
+
+
 ## [0.19.0](https://github.com/trustoverip/dtgwg-trust-tasks-tf/compare/trust-tasks-v0.18.11...trust-tasks-v0.19.0) — 2026-09-09
 
 
