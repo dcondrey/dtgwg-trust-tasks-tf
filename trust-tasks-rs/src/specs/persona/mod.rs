@@ -6,6 +6,7 @@ pub mod claim_types;
 pub mod contact;
 pub mod correlation;
 pub mod disclosure;
+pub mod facet;
 pub mod local;
 pub mod profile;
 pub mod renderers;

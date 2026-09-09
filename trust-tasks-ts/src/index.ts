@@ -185,6 +185,9 @@ export * as PersonaCorrelationAnalyze_v1_0 from "./persona/correlation/analyze/1
 export * as PersonaDisclosureHistory_v1_0 from "./persona/disclosure/history/1.0/payload.js";
 export * as PersonaDisclosurePresent_v1_0 from "./persona/disclosure/present/1.0/payload.js";
 export * as PersonaDisclosurePreview_v1_0 from "./persona/disclosure/preview/1.0/payload.js";
+export * as PersonaFacetDelete_v1_0 from "./persona/facet/delete/1.0/payload.js";
+export * as PersonaFacetList_v1_0 from "./persona/facet/list/1.0/payload.js";
+export * as PersonaFacetPut_v1_0 from "./persona/facet/put/1.0/payload.js";
 export * as PersonaLocalBindingSet_v1_0 from "./persona/local/binding/set/1.0/payload.js";
 export * as PersonaLocalProfileDelete_v1_0 from "./persona/local/profile/delete/1.0/payload.js";
 export * as PersonaLocalProfileGet_v1_0 from "./persona/local/profile/get/1.0/payload.js";
