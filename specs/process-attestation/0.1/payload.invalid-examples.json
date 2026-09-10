@@ -42,7 +42,7 @@
     "payload": {
       "artifact": { "digest": "hcHFbGVGLXVQqZ8mRk2vN4pT7sYwD1jB6xK0aC3eI9M", "algorithm": "sha-256" },
       "challenge": "9tKpX2mQzR7vLbN4hJ8cWfA6dY0sE5uT3gO1iZ",
-      "disclosure": ["summary", "summary"]
+      "disclosure": ["document", "document"]
     }
   },
   {

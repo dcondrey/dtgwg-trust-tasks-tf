@@ -137,6 +137,7 @@
     },
     "Assessment": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "primitive",
         "determination"
@@ -249,13 +250,11 @@
           "properties": {
             "startedAt": {
               "type": "string",
-              "format": "date-time",
-              "maxLength": 32
+              "format": "date-time"
             },
             "endedAt": {
               "type": "string",
-              "format": "date-time",
-              "maxLength": 32
+              "format": "date-time"
             },
             "checkpointCount": {
               "type": "integer",
@@ -302,8 +301,7 @@
               },
               "anchoredAt": {
                 "type": "string",
-                "format": "date-time",
-                "maxLength": 32
+                "format": "date-time"
               }
             }
           }

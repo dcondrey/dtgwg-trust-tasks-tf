@@ -284,6 +284,7 @@ export const PAYLOAD_SCHEMA = {
     },
     "Assessment": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "primitive",
         "determination"
@@ -396,13 +397,11 @@ export const PAYLOAD_SCHEMA = {
           "properties": {
             "startedAt": {
               "type": "string",
-              "format": "date-time",
-              "maxLength": 32
+              "format": "date-time"
             },
             "endedAt": {
               "type": "string",
-              "format": "date-time",
-              "maxLength": 32
+              "format": "date-time"
             },
             "checkpointCount": {
               "type": "integer",
@@ -449,8 +448,7 @@ export const PAYLOAD_SCHEMA = {
               },
               "anchoredAt": {
                 "type": "string",
-                "format": "date-time",
-                "maxLength": 32
+                "format": "date-time"
               }
             }
           }
@@ -577,6 +575,7 @@ export const RESPONSE_PAYLOAD_SCHEMA = {
     },
     "Assessment": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "primitive",
         "determination"
@@ -689,13 +688,11 @@ export const RESPONSE_PAYLOAD_SCHEMA = {
           "properties": {
             "startedAt": {
               "type": "string",
-              "format": "date-time",
-              "maxLength": 32
+              "format": "date-time"
             },
             "endedAt": {
               "type": "string",
-              "format": "date-time",
-              "maxLength": 32
+              "format": "date-time"
             },
             "checkpointCount": {
               "type": "integer",
@@ -742,8 +739,7 @@ export const RESPONSE_PAYLOAD_SCHEMA = {
               },
               "anchoredAt": {
                 "type": "string",
-                "format": "date-time",
-                "maxLength": 32
+                "format": "date-time"
               }
             }
           }
