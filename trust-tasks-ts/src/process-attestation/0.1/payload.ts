@@ -3,6 +3,9 @@
  * Source: specs/process-attestation/0.1/payload.schema.json
  */
 
+import type { Ext } from "../../_shared/components.js";
+
+
 /**
  * Derived aggregates only. An enum rather than a pattern so a primitive cannot widen its own disclosure surface by inventing a name. The determination itself is not a category: it is always in `assessment` when the result is `attested`. Raw behavioral samples and fingerprints are out of scope for 0.1.
  */
@@ -58,10 +61,6 @@ export interface Artifact {
   algorithm: "sha-256" | "sha-384" | "sha-512" | "blake3";
   byteLength?: number;
 }
-/**
- * SPEC §4.5.1: every immediate child MUST be reverse-DNS namespaced.
- */
-export interface Ext {}
 export interface Attested {
   result: "attested";
   /**
@@ -123,6 +122,9 @@ export interface Unavailable {
   artifact: Artifact;
   ext?: Ext;
 }
+
+/** Shared definitions this specification references, re-exported under the names it used to declare them with. */
+export type { Ext };
 
 /** Trust Task type URI. */
 export const TYPE_URI = "https://trusttasks.org/spec/process-attestation/0.1" as const;
@@ -456,11 +458,14 @@ export const PAYLOAD_SCHEMA = {
       }
     },
     "Ext": {
+      "title": "Ext",
+      "description": "Vendor-namespaced extension object per SPEC.md §4.5.1. Each immediate key MUST be a reverse-DNS namespace; structure under each namespace is opaque to the framework.",
       "type": "object",
+      "minProperties": 1,
+      "additionalProperties": true,
       "propertyNames": {
-        "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)+$"
-      },
-      "description": "SPEC §4.5.1: every immediate child MUST be reverse-DNS namespaced."
+        "pattern": "^[a-z][a-z0-9-]*(\\.[a-z0-9-]+)+$"
+      }
     }
   }
 } as const;
@@ -747,11 +752,14 @@ export const RESPONSE_PAYLOAD_SCHEMA = {
       }
     },
     "Ext": {
+      "title": "Ext",
+      "description": "Vendor-namespaced extension object per SPEC.md §4.5.1. Each immediate key MUST be a reverse-DNS namespace; structure under each namespace is opaque to the framework.",
       "type": "object",
+      "minProperties": 1,
+      "additionalProperties": true,
       "propertyNames": {
-        "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)+$"
-      },
-      "description": "SPEC §4.5.1: every immediate child MUST be reverse-DNS namespaced."
+        "pattern": "^[a-z][a-z0-9-]*(\\.[a-z0-9-]+)+$"
+      }
     }
   }
 } as const;
